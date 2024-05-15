@@ -873,7 +873,7 @@ ghcOptions opts = "{-# OPTIONS_GHC " <> T.intercalate ", " opts <> " #-}\n"
 -- | Generate some convenience CPP macros.
 cppMacros :: Text
 cppMacros = T.unlines
-  ["#if (MIN_VERSION_haskell_gi_overloading(1,0,0) && !defined(__HADDOCK_VERSION__))"
+  ["#if MIN_VERSION_haskell_gi_overloading(1,0,0)"
   , "#define ENABLE_OVERLOADING"
   , "#endif"]
 
